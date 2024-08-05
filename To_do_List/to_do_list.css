@@ -1,0 +1,222 @@
+:root {
+    --light-bg: #f8f9fa;
+    --light-container-bg: #ffffff;
+    --light-text: #212529;
+    --light-input-border: #ced4da;
+    --light-input-focus: #80bdff;
+    --light-button-bg: #007bff;
+    --light-button-hover-bg: #0056b3;
+    --light-task-bg: #e9ecef;
+    --light-task-hover-bg: #dee2e6;
+    --light-danger-bg: #dc3545;
+    --light-danger-hover-bg: #c82333;
+
+    --dark-bg: #343a40;
+    --dark-container-bg: #495057;
+    --dark-text: #f8f9fa;
+    --dark-input-border: #6c757d;
+    --dark-input-focus: #66b2ff;
+    --dark-button-bg: #66b2ff;
+    --dark-button-hover-bg: #3399ff;
+    --dark-task-bg: #6c757d;
+    --dark-task-hover-bg: #5a6268;
+    --dark-danger-bg: #ff4d4d;
+    --dark-danger-hover-bg: #ff1a1a;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: var(--light-bg);
+    transition: background 0.3s ease-in-out;
+}
+
+body.dark {
+    background: var(--dark-bg);
+}
+
+.theme-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #66b2ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.container {
+    background-color: var(--light-container-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .container {
+    background-color: var(--dark-container-bg);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 1.75em;
+    color: var(--light-text);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark h1 {
+    color: var(--dark-text);
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid var(--light-input-border);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+body.dark #taskInput {
+    border: 1px solid var(--dark-input-border);
+}
+
+#taskInput:focus {
+    border-color: var(--light-input-focus);
+}
+
+body.dark #taskInput:focus {
+    border-color: var(--dark-input-focus);
+}
+
+#addTaskButton {
+    padding: 10px 20px;
+    background-color: var(--light-button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+body.dark #addTaskButton {
+    background-color: var(--dark-button-bg);
+}
+
+#addTaskButton:hover {
+    background-color: var(--light-button-hover-bg);
+}
+
+body.dark #addTaskButton:hover {
+    background-color: var(--dark-button-hover-bg);
+}
+
+#addTaskButton:active {
+    transform: scale(0.98);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+li {
+    background-color: var(--light-task-bg);
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+body.dark li {
+    background-color: var(--dark-task-bg);
+}
+
+li:hover {
+    transform: translateY(-2px);
+    background-color: var(--light-task-hover-bg);
+}
+
+body.dark li:hover {
+    background-color: var(--dark-task-hover-bg);
+}
+
+li button {
+    background-color: var(--light-danger-bg);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark li button {
+    background-color: var(--dark-danger-bg);
+}
+
+li button:hover {
+    background-color: var(--light-danger-hover-bg);
+}
+
+body.dark li button:hover {
+    background-color: var(--dark-danger-hover-bg);
+}

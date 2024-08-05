@@ -1,0 +1,77 @@
+/* Reset default styles and set base font */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #575555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the quiz */
+#quiz {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    color: #1f2532;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Title */
+#title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Question text style */
+#question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+/* Choices list */
+#choices {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Choice items */
+#choices li {
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Submit button */
+#submit {
+    padding: 15px 32px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+/* Submit button hover effect */
+#submit:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Feedback message */
+#feedback {
+    font-weight: bold;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

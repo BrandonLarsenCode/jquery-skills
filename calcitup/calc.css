@@ -1,0 +1,177 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background-color-light: #f5f5f5;
+    --background-color-dark: #333;
+    --text-color-light: #000;
+    --text-color-dark: #fff;
+    --button-color-light: #eee;
+    --button-color-dark: #444;
+    --button-hover-color-light: #ddd;
+    --button-hover-color-dark: #555;
+    --operator-button-color-light: #f9a825;
+    --operator-button-color-dark: #ffa726;
+    --operator-button-hover-light: #f57f17;
+    --operator-button-hover-dark: #fb8c00;
+    --equals-button-color-light: #00c853;
+    --equals-button-color-dark: #66bb6a;
+    --equals-button-hover-light: #00a344;
+    --equals-button-hover-dark: #43a047;
+}
+
+body.light {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --button-color: var(--button-color-light);
+    --button-hover-color: var(--button-hover-color-light);
+    --operator-button-color: var(--operator-button-color-light);
+    --operator-button-hover: var(--operator-button-hover-light);
+    --equals-button-color: var(--equals-button-color-light);
+    --equals-button-hover: var(--equals-button-hover-light);
+}
+
+body.dark {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --button-color: var(--button-color-dark);
+    --button-hover-color: var(--button-hover-color-dark);
+    --operator-button-color: var(--operator-button-color-dark);
+    --operator-button-hover: var(--operator-button-hover-dark);
+    --equals-button-color: var(--equals-button-color-dark);
+    --equals-button-hover: var(--equals-button-hover-dark);
+}
+
+.calculator {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3);
+    width: 280px;
+    max-width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    padding-top: 15px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+.operator {
+    background-color: var(--operator-button-color);
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: var(--operator-button-hover);
+}
+
+.clear {
+    grid-column: span 2;
+    background-color: #ff5252;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #ff1744;
+}
+
+.equals {
+    grid-column: span 2;
+    background-color: var(--equals-button-color);
+    color: #fff;
+}
+
+.equals:hover {
+    background-color: var(--equals-button-hover);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}

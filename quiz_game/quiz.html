@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Quiz Game</title>
+    <link rel="stylesheet" href="quiz.css"> <!-- Assuming you have a CSS file for styling -->
+</head>
+<body>
+    <div id="quiz">
+        <h1 id="title">Quiz Time!</h1>
+        <div id="question">Question text goes here?</div>
+        <ul id="choices">
+            <li><input type="radio" name="choice" value="Choice 1"> Choice 1</li>
+            <li><input type="radio" name="choice" value="Choice 2"> Choice 2</li>
+            <li><input type="radio" name="choice" value="Choice 3"> Choice 3</li>
+        </ul>
+        <button id="submit">Submit Answer</button>
+        <div id="feedback">Correct! / Incorrect!</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery library -->
+    <script src="quiz.js"></script> <!-- Your custom JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #686666;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Container for centering and layout */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Input field styling */
+#long-url {
+    width: calc(100% - 32px);
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input field focus effect */
+#long-url:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Styling for shortened URL display */
+#shortened-url-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+#shortened-url {
+    padding: 10px;
+    font-size: 18px;
+    color: #04011a;
+    border: 2px dashed #2ea7cc;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Animation for shortened URL appearing */
+#shortened-url.shown {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button styling */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #5443f1;
+}
+
+/* Copy button styling */
+#copy-btn {
+   
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Copy button hover effect */
+#copy-btn:hover {
+    background-color: #5443f1;
+}
